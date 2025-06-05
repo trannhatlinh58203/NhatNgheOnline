@@ -27,7 +27,10 @@ export default function Login() {
         }, 500);
       }
     } catch (err) {
-      setMessage(err.response?.data || 'Đăng nhập thất bại!');
+      const errorMsg = typeof err.response?.data === 'string'
+        ? err.response.data
+        : (err.response?.data?.message || 'Đăng nhập thất bại!');
+      setMessage(errorMsg);
     }
   };
 
@@ -96,7 +99,11 @@ export default function Login() {
           <div className="flex-grow h-px bg-gray-300"></div>
         </div>
         <div className="flex space-x-4 mb-4">
-          <button className="flex-1 flex items-center justify-center bg-red-500 text-white py-2 rounded hover:bg-red-600 transition font-semibold">
+          <button
+            className="flex-1 flex items-center justify-center bg-red-500 text-white py-2 rounded hover:bg-red-600 transition font-semibold"
+            type="button"
+            onClick={() => window.location.href = 'http://localhost:8080/oauth2/authorization/google'}
+          >
             <FaGoogle className="mr-2" /> Google
           </button>
           <button className="flex-1 flex items-center justify-center bg-blue-800 text-white py-2 rounded hover:bg-blue-900 transition font-semibold">
