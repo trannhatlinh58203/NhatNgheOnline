@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import videoBg from '../../assets/videos/2videoserach.mp4';
 
 export default function SearchPage() {
   const [keyword, setKeyword] = useState('');
