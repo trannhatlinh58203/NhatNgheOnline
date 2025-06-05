@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Sá
 import HomePage from '../pages/Home/Home';
 import SearchPage from '../pages/Search/SearchPage'; 
 import Login from '../pages/Login';
+import Oauth2Redirect from '../pages/Oauth2Redirect';
 
 const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/oauth2/redirect" element={<Oauth2Redirect />} />
       </Routes>
     </Router>
   );
