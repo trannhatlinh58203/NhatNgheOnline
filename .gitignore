@@ -1,0 +1,15 @@
+# Các file chứa thông tin nhạy cảm
+Backend/NhatNgheOnline-Backend/src/main/resources/application.properties
+*.env
+
+# Thư mục node_modules
+node_modules/
+
+# Các file build/compile
+target/
+build/
+
+# Các file IDE
+.idea/
+.vscode/
+*.iml
