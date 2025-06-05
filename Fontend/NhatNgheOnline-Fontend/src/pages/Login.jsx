@@ -112,7 +112,7 @@ export default function Login() {
         </div>
         <div className="text-center text-sm mt-2">
           Bạn chưa có tài khoản?{' '}
-          <a href="#" className="text-blue-600 hover:underline font-semibold">Đăng ký ngay!</a>
+          <span onClick={() => navigate('/register')} className="text-blue-600 hover:underline font-semibold cursor-pointer">Đăng ký ngay!</span>
         </div>
       </div>
     </div>
