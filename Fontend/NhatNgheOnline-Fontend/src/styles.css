@@ -1,0 +1,95 @@
+/* styles.css */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.image-animated {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-animated:hover {
+  animation: zoomIn 1s infinite;
+}
+
+
+
+/* Thêm CSS cho hiệu ứng animation */
+/* Thêm CSS cho hiệu ứng animation */
+/* Zoom-in hiệu ứng khi hover */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.image-animated {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-animated:hover {
+  animation: zoomIn 1s infinite;
+}
+
+/* Pulse-in hiệu ứng cho các phần tử */
+@keyframes pulseIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate__pulseIn {
+  animation: pulseIn 1.5s ease-in-out forwards;
+}
+
+/* Rainbow text effect */
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
+
+.rainbow-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  color: transparent;
+  animation: rainbow 3s infinite linear;
+}
+
+.rainbow-text:hover {
+  animation: rainbow 1s infinite linear;
+}
