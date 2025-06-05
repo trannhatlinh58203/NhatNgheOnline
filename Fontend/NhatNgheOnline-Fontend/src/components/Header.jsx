@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import '../styles.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
@@ -26,7 +28,7 @@ export default function Header() {
     <a href="#" className="text-lg font-semibold hover:text-gray-100 transition">Dịch vụ</a>
     <a href="#" className="text-lg font-semibold hover:text-gray-100 transition">Liên hệ</a>
   </nav>
-  <button className="text-lg font-semibold text-white border border-white px-4 py-2 rounded-xl hover:bg-white hover:text-blue-900 transition">
+  <button className="text-lg font-semibold text-white border border-white px-4 py-2 rounded-xl hover:bg-white hover:text-blue-900 transition" onClick={() => navigate('/login')}>
     Đăng nhập
   </button>
 </div>
@@ -50,7 +52,7 @@ export default function Header() {
           <a href="#" className="text-lg font-semibold hover:text-gray-200 transition">Liên hệ</a>
 
           <div className="flex justify-center w-full mt-4">
-            <button className="text-lg font-semibold text-white hover:text-gray-200 transition w-full text-center">
+            <button className="text-lg font-semibold text-white hover:text-gray-200 transition w-full text-center" onClick={() => { setIsOpen(false); navigate('/login'); }}>
               Đăng nhập
             </button>
           </div>
